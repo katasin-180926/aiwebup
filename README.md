@@ -1,0 +1,2 @@
+# aiwebup
+*aiapp
