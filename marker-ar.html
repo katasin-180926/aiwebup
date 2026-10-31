@@ -184,12 +184,24 @@ function animate(t){
     });
   }
 
+  
   if(progress>.35){
     couple.setAttribute('visible',true);
-    const s=Math.min(1,(progress-.35)*2.7);
-    couple.object3D.scale.setScalar(s);
-    couple.object3D.position.y=.15+s*.45;
+    couple.object3D.visible = true;
+
+    const s=Math.min(1.65,(progress-.35)*4.5);
+
+    couple.object3D.scale.set(s,s,s);
+    couple.object3D.position.set(
+      0,
+      .65 + Math.min(1,progress)*.35,
+      .38
+    );
+
+    couple.object3D.rotation.y =
+      Math.sin(t*.0015)*.12;
   }
+
 
   text.setAttribute('visible',progress>.75);
 }
