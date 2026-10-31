@@ -1,23 +1,16 @@
-# Our First Anniversary — Android WebAR prototype
+# 1周年記念AR — iPhone / Android 共通モード
 
-## What's included
-- Animated 3D gift box, opening lid, floating hearts and anniversary text
-- 3D preview for desktop and unsupported mobile browsers
-- WebXR immersive AR hit-test for compatible Android devices in Chrome
-- Tap to place the box on a detected surface, then tap again or use the open button
+## 公開方法
+1. GitHub `katasin-180926/aiwebup` の Add file → Upload files を開く。
+2. `marker-ar.html` をリポジトリのルートへアップロードし、Commit changes。
+3. https://katasin-180926.github.io/aiwebup/marker-ar.html を Safari（iPhone）または Chrome（Android）で開く。
+4. カメラへのアクセスを許可する。
+5. 別の画面に https://raw.githubusercontent.com/AR-js-org/AR.js/master/data/images/hiro.png を表示するか印刷し、スマホのカメラを向ける。
+6. ボックスが見えたら「プレゼントを開ける」を押す。
 
-## Publish (HTTPS required)
-1. Upload `index.html` to a GitHub repository root.
-2. In Settings > Pages, select Deploy from a branch, main, /(root).
-3. Wait for the Pages URL, then open it in Chrome on an ARCore-compatible Android device.
-4. Give camera permission, tap ARで見る, scan a surface and tap to place.
-
-## Important
-- This prototype has not been tested on a physical Android device.
-- GitHub Pages is public: don't upload private couple photos until choosing a suitable privacy approach.
-- The original image and personalized 3D characters are not yet incorporated.
-- Three.js is loaded from a CDN, so an internet connection is needed.
-- AR depends on Chrome, device support, Google Play Services for AR and HTTPS.
-
-## Customize
-Edit the text in the HTML `label(...)` calls and the `start()` message.
+## 注意
+- この版は「Hiro」マーカーを基準に位置合わせするマーカーARです。床面認識型ARとは異なります。
+- 元の `index.html` は変更しないため、Android用WebXRは従来のURLで引き続き利用できます。
+- HTTPSとカメラ許可が必要です。AR.js/A-FrameのCDN読み込みにはネット接続が必要です。
+- iPhone/Android実機での動作はまだ未検証です。
+- 個人写真はまだ入れていません。
